@@ -1,6 +1,7 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState, useEffect, useContext} from 'react'
 import { RiSettings3Fill } from 'react-icons/ri';
 import { AiOutlineDown } from 'react-icons/ai';
+import { TransactionContext } from '../../context/TransactionContext';
 
 const style = {
     wrapper: `w-screen flex items-center justify-center mt-14`,
@@ -17,6 +18,17 @@ const style = {
 }
 
 export default function Main(){
+
+    const {formData, handleChange, sendTransaction } = useContext(TransactionContext);
+    const handleSubmit = async (e) => {
+        const { addressTo, amount } = formData;
+        e.preventDefault;
+
+        if(!addressTo  || !amount) return;
+        
+        sendTransaction();
+    }
+
     return (
         <div className={style.wrapper}>
             <div className={style.content}>
@@ -35,7 +47,6 @@ export default function Main(){
                         placeholder='0.0' 
                         pattern='^[0.9]*[.,]?[0-9]*$'
                         onChange={e => handleChange(e, 'amount')}/>
-
                     <div className={style.currencySelector}>
                         <div className={style.currencySelectorContent}>
                             <div className={style.currencySelectorIcon}>
@@ -56,13 +67,12 @@ export default function Main(){
                             onChange={e => handleChange(e, 'addressTo')}/>
                     
                     <div className={style.currencySelector}>
-
+                        
                     </div>
                 </div>
                 <div onClick={(e) => handleSubmit(e)} className={style.confirmButton}>
                     Confirm
                 </div>
-
             </div>
         </div>
     );

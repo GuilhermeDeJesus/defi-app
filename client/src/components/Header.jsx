@@ -23,7 +23,6 @@ export default function Header(){
     
     const {connectWallet, currentAccount} = useContext(TransactionContext);
     const [selectedNav, setSelectedNav] = useState('swap');
-    console.log({connectWallet, currentAccount});
     
     return (
         <div className={style.wrapper}>
