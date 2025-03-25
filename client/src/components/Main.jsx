@@ -39,7 +39,7 @@ export default function Main(){
                     <div className={style.currencySelector}>
                         <div className={style.currencySelectorContent}>
                             <div className={style.currencySelectorIcon}>
-                                <img src='../public/ether.png' alt='eth logo' height={20} width={20} />
+                                <img src='/ether.png' alt='eth logo' height={20} width={20} />
                             </div>
                             <div className={style.currencySelectorTicker}>
                                 ETH
