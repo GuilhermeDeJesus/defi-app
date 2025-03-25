@@ -1,0 +1,5 @@
+1 - Criar o projeto com o Yarn
+    yarn create next-app -e with-tailwindcss client
+    No vídeo ele cria o projeto com nextJs, porém resolvi criar usando o vite + react dando o comando "npm create vite@latest"
+
+2 - Na pasta studio rode o comando sanity "npm install -g @sanity/cli" e "sanity init" depois um "sanity start"
