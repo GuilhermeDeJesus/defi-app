@@ -28,7 +28,7 @@ export default function Header(){
     return (
         <div className={style.wrapper}>
             <div className={style.headerLogo}>
-                <img src='../public/uniswap.png' alt='uniswap' height={40} width={40} />
+                <img src='/uniswap.png' alt='uniswap' height={40} width={40} />
             </div>
             <div className={style.nav}>
                 <div className={style.navItemsCaontainer}>
@@ -52,7 +52,7 @@ export default function Header(){
             <div className={style.buttonsContainer}>
                 <div className={`${style.button} ${style.buttonPadding}`}>
                     <div className={style.buttonIconContainer}>
-                        <img src='../public/ether.png' alt='eth logo' header={40} width={40} />
+                        <img src='/ether.png' alt='eth logo' header={40} width={40} />
                     </div>
                     <p>Ethereum</p>
                     <div className={style.buttonIconContainer}>
